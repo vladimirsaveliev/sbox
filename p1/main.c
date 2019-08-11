@@ -39,11 +39,12 @@ void exercize_1_5(void)
 	printf("Not ready.\nMishka, you code goes here\n");
 }
 
+#define usage printf("usage: %s s1.3 | e1.5\n", argv[0])
 
 int main(int argc, char **argv)
 {
 	if (argc < 2) {
-		printf("usage: %s s1.3 | e1.5\n", argv[0]);
+		usage;
 		return 0;
 	}
 	
@@ -57,7 +58,7 @@ int main(int argc, char **argv)
 		break;
 
 	default:
-		printf("usage: %s\n", argv[0]);
+		usage;
 		break;
 	}
 	
